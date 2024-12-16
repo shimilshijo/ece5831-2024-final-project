@@ -41,9 +41,9 @@ Here are the relevant links for the project:
 
 To execute this file, use the following command:
 
-    ```bash
+```bash
     python run.py
-    ```
+```
 Upload the image from the `dataset` directory and see the prediction results.
 
 * **dataset**
