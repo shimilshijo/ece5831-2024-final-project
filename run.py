@@ -1,13 +1,13 @@
-#This program loads the model, upload the test image through UI and  handle adaptive UI based on emotion and displays the prediction
+#This file loads the build CNN model and create adaptive user interface based on emotion
 import tkinter as tk
 from tkinter import filedialog, Label
 from PIL import Image, ImageTk
 import numpy as np
 import cv2
 import tensorflow as tf
+import os
 
 # Load the trained model
-# model = tf.keras.models.load_model('new_model.h5')
 model = tf.keras.models.load_model('best_model.keras')
 
 # Define emotion categories
@@ -27,26 +27,44 @@ def load_image(file_path):
     img = np.expand_dims(img, axis=0)   # Add batch dimension
     return img
 
-# Function to handle adaptive UI based on emotion
+def get_actual_label(file_path):
+    '''Function to get the actual label from the image path'''
+    # The label is the last subdirectory in the path (before the image file)
+    label = os.path.basename(os.path.dirname(file_path))
+    return label
+
 def adaptive_interface(emotion):
+    '''Function to handle adaptive UI based on emotion'''
     if emotion == "Happy":
         root.configure(bg="yellow")
-        response_label.config(text="Bright theme applied! Keep smiling!", fg="green")
+        response_label.config(text="You look happy! Share your joy with others!", fg="green")
     elif emotion == "Sad":
         root.configure(bg="lightblue")
-        response_label.config(text="Soothing colors applied. Take it easy.", fg="blue")
+        response_label.config(text="It's okay to feel sad. Take a moment for yourself.", fg="blue")
     elif emotion == "Angry":
         root.configure(bg="lightgrey")
-        response_label.config(text="Calm theme applied. Take a deep breath.", fg="red")
-    else:
+        response_label.config(text="Anger is natural. Take a deep breath and let it go.", fg="red")
+    elif emotion == "Disgust":
+        root.configure(bg="purple")
+        response_label.config(text="Disgust can be tough. Focus on something positive.", fg="white")
+    elif emotion == "Fear":
+        root.configure(bg="orange")
+        response_label.config(text="Fear is temporary. You are stronger than you think.", fg="brown")
+    elif emotion == "Surprise":
+        root.configure(bg="pink")
+        response_label.config(text="Surprises can be exciting! Embrace the unexpected.", fg="magenta")
+    else:  # Neutral
         root.configure(bg="white")
-        response_label.config(text="Neutral theme applied.", fg="black")
+        response_label.config(text="Feeling neutral is perfectly fine. Stay balanced.", fg="black")
 
 def detect_emotion():
     '''Function to detect emotion from loaded image'''
     file_path = filedialog.askopenfilename()
     if file_path:
         img = load_image(file_path)
+        
+        # Extract the actual label from the file path
+        actual_label = get_actual_label(file_path)
         
         # Make prediction
         predictions = model.predict(img)
@@ -56,7 +74,8 @@ def detect_emotion():
         
         # Display prediction with score
         emotion_label.config(text=f"Detected Emotion: {predicted_emotion} ({prediction_score*100:.2f}%)")
-        
+        actual_label_label.config(text=f"Actual Label: {actual_label}")
+
         # Update adaptive interface
         adaptive_interface(predicted_emotion)
 
@@ -80,6 +99,9 @@ detect_button.pack(pady=20)
 
 emotion_label = Label(root, text="", font=("Helvetica", 14))
 emotion_label.pack(pady=10)
+
+actual_label_label = Label(root, text="", font=("Helvetica", 12))
+actual_label_label.pack(pady=10)
 
 response_label = Label(root, text="", font=("Helvetica", 12))
 response_label.pack(pady=10)
