@@ -25,8 +25,8 @@ This project uses FER-2013 [dataset](https://www.kaggle.com/datasets/msambare/fe
 Here are the relevant links for the project:
 
 - **[Pre-recorded Presentation Video](https://youtu.be/yIKpY96RJtY)**: A pre-recorded video explaining the entire project from start to end. It covers the background research, dataset selection, model development, training, and validation, interpretation as well as the results of the graphical user interface (GUI).
-- **[Presentation Slides](https://drive.google.com/drive/folders/1sXu-DHwk_76k78Q_WjYL3fn7D12Xc0SS?usp=drive_link)**: Slides used during the presentation summarizing the project work and key findings.
-- **[Project Report](https://drive.google.com/drive/folders/1G-4KfnO0YXj56paMbyoTQLu9rM22XvUU?usp=drive_link)**: A detailed report describing the technical aspects of the project, the methods employed, and results obtained.
+- **[Presentation Slides](https://docs.google.com/presentation/d/1OF48Z_bCW7Kz3Y97T1KoxL6x1OU78cam/edit#slide=id.p1)**: Slides used during the presentation summarizing the project work and key findings.
+- **[Project Report](https://drive.google.com/drive/folders/1G-4KfnO0YXj56paMbyoTQLu9rM22XvUU)**: A detailed report describing the technical aspects of the project, the methods employed, and results obtained.
 - **[Dataset](https://drive.google.com/drive/folders/13l-hbD04MyyVuNdMY7zn0aQXTCq7yCDs?usp=drive_link)**: The FER-2013 dataset used for this project.
 - **[Demo Video](lhttps://youtu.be/Bn2F2MgZJJE?si=pQTqJKkPE8lSb6q0)**: A demo showcasing the functionality and features of the developed application.
 
