@@ -18,7 +18,6 @@ root = tk.Tk()
 root.title("Emotion Detection with Adaptive UI")
 root.geometry("600x500")
 
-
 def load_image(file_path):
     '''Function to load and preprocess image'''
     img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
