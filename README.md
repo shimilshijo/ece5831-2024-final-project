@@ -37,13 +37,15 @@ Here are the relevant links for the project:
 * **best_model.keras:**
     * This is the saved keras model after training.
 * **run.py:**
-    * File to load the adaptive UI,upload test image and perform prediction.
+    * This script is used to launch the adaptive UI, upload a test image, and perform predictions. The saved CNN model is loaded within the script, and upon uploading an image, the prediction results are displayed on the UI. Test images for upload can be selected from the dataset directory available in the GitHub repository.
 
-    This file can be executed with the command
+To execute this file, use the following command:
 
     ```bash
     python run.py
     ```
+Upload the image from the `dataset` directory and see the prediction results.
+
 * **dataset**
     * This directory contains sample test images for each class(2 images per class). This can be used while code execution(both jupyter notebook and run.py file)
 
