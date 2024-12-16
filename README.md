@@ -29,7 +29,7 @@ Here are the relevant links for the project:
 - **[Project Report](https://drive.google.com/drive/folders/1G-4KfnO0YXj56paMbyoTQLu9rM22XvUU)**: A detailed report describing the technical aspects of the project, the methods employed, and results obtained.
 - **[Dataset](https://drive.google.com/drive/folders/13l-hbD04MyyVuNdMY7zn0aQXTCq7yCDs?usp=drive_link)**: The FER-2013 dataset used for this project.
 - **[Demo Video](https://youtu.be/Bn2F2MgZJJE?si=pQTqJKkPE8lSb6q0)**: A demo showcasing the functionality and features of the developed application.
- **[Google Drive Link](https://drive.google.com/drive/folders/1ZpQwp-XVgQODgPT5IzpyAQFh0EkJR4zc?usp=drive_link)**: Includes the resources related to this project such as presentation,report and complete dataset.
+- **[Google Drive Link](https://drive.google.com/drive/folders/1ZpQwp-XVgQODgPT5IzpyAQFh0EkJR4zc?usp=drive_link)**: Includes the resources related to this project such as presentation,report and complete dataset.
 
 ## Repository Structure
 
